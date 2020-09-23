@@ -1,4 +1,5 @@
 class PlacesController < ApplicationController
+  before_action :set_place,only: [:show,:edit]
 
   def index
     @places = Place.all
@@ -22,4 +23,9 @@ class PlacesController < ApplicationController
   def place_params
     params.permit(:name,:image).merge(user_id: current_user.id)
   end
+
+  def set_place
+    @place = Place.find(params[:id])
+  end
+
 end
