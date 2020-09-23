@@ -8,6 +8,6 @@ class ItemsController < ApplicationController
   private
 
   def item_params
-    params.permit(:name,:place_id).merge(user_id: current_user.id, place_id: params[:place_id])
+    params.permit(:name,:image,:place_id).merge(user_id: current_user.id, place_id: params[:place_id])
   end
 end

@@ -11,10 +11,14 @@ consumer.subscriptions.create("ItemChannel", {
 
   received(data) {
     console.log(data)
-    const html = `<p>${data.content.name}</p>`;
+    const html = `<p>${data.content.name}
+    ${data.content.image}</p>`;
     const messages = document.getElementById('items');
     const newMessage = document.getElementById('item_name');
+    const newImage = document.getElementById('item_image');
     messages.insertAdjacentHTML('afterbegin', html);
     newMessage.value='';
+    newImage.value='';
+    location.reload(false);
   }
 });
