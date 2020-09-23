@@ -5,5 +5,8 @@
 <%= f.submit "登録する" %>
 <% end %>
 <% @places.each do |place|%>
-<%= place.name%><%= image_tag place.image%>
+<%= place.name%>
+<%= link_to place_path(place.id)do%>
+<%= image_tag place.image%>
+<% end%>
 <% end %>
