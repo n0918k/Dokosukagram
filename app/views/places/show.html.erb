@@ -1,1 +1,11 @@
 <%= image_tag @place.image%>
+
+<%= form_with model: @item,url: place_items_path(@place.id) do |f| %>
+  <%= f.text_field :name,id: "item_name" %>
+  <%= f.submit '送信' %>
+<% end %>
+<div id='items'>
+  <% @items.reverse_each do |item| %>
+    <p><%= item.name %></p>
+  <% end %>
+</div>
