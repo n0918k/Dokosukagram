@@ -19,6 +19,10 @@ class PlacesController < ApplicationController
     end
   end
 
+  def show
+    @items = @place.items.includes(:user)
+  end
+
   private
   def place_params
     params.permit(:name,:image).merge(user_id: current_user.id)
