@@ -9,7 +9,6 @@ class PlacesController < ApplicationController
   end
 
   def create
-    binding.pry
     @place = Place.new(place_params)
     if  @place.valid?
         @place.save
