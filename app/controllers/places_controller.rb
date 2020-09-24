@@ -1,8 +1,9 @@
 class PlacesController < ApplicationController
   before_action :set_place,only: [:show,:edit]
+  before_action :login
 
   def index
-    @places = Place.all
+    @places = Place.where(user_id: current_user.id)
   end
 
   def new
@@ -30,6 +31,12 @@ class PlacesController < ApplicationController
 
   def set_place
     @place = Place.find(params[:id])
+  end
+
+  def login
+    unless user_signed_in?
+      redirect_to new_user_session_path
+    end
   end
 
 end
