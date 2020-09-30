@@ -1,12 +1,29 @@
 <%= render "shared/header"%>
-<%= form_with model:@place,url: "/places",method: :create,local: true  do|f|%>
-<%= f.file_field :image%>
-<%= f.text_field :name%>
-<%= f.submit "登録する" %>
-<% end %>
-<% @places.each do |place|%>
-<%= place.name%>
-<%= link_to place_path(place.id)do%>
-<%= image_tag place.image%>
-<% end%>
-<% end %>
+
+<div class="container">
+
+  <% if @places.blank?%>
+    <div class="text-center mt-5 ">
+      <%= link_to "場所が登録されていません", new_place_path,class:"h2 text-center mt-5"%>
+    </div>
+  <% else %>
+    <p class="h1 mt-5">場所</p>
+      <div class="place-wrapper ">
+        <% @places.each do |place|%>
+        <%= link_to place_path(place.id)do%>
+          <div class="place-item">
+              <div class="h2 text-dark">
+                <%= place.name%>
+              </div>
+              <div class="place-image">
+              <%= image_tag place.image.variant(resize:'250x250')%>
+              </div>
+          </div>
+          <% end%>
+        <% end %>
+      </div>
+  <% end %>
+</div>
+
+<%= render "shared/footer"%>
+

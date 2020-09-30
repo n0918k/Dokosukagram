@@ -1,0 +1,9 @@
+<%= render "shared/header"%>
+
+<div class="container text-center mt-5">
+
+  <div class="mt-5">
+  <p class="h1 mt-5 mb-5"><%= @item.name%></p>
+    <%= image_tag @item.image.variant(resize:'500x500')%>
+  </div>
+</div>

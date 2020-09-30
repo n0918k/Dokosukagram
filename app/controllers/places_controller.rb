@@ -1,5 +1,5 @@
 class PlacesController < ApplicationController
-  before_action :set_place,only: [:show,:edit]
+  before_action :set_place, only: [:show, :edit]
   before_action :login
 
   def index
@@ -12,11 +12,11 @@ class PlacesController < ApplicationController
 
   def create
     @place = Place.new(place_params)
-    if  @place.valid?
-        @place.save
-        redirect_to root_path
+    if @place.valid?
+      @place.save
+      redirect_to root_path
     else
-        render 'new'
+      render 'new'
     end
   end
 
@@ -24,9 +24,14 @@ class PlacesController < ApplicationController
     @items = @place.items.includes(:user)
   end
 
+  def search
+    @items = Item.search(params[:keyword])
+  end
+
   private
+
   def place_params
-    params.permit(:name,:image).merge(user_id: current_user.id)
+    params.require(:place).permit(:name, :image).merge(user_id: current_user.id)
   end
 
   def set_place
@@ -34,9 +39,6 @@ class PlacesController < ApplicationController
   end
 
   def login
-    unless user_signed_in?
-      redirect_to new_user_session_path
-    end
+    redirect_to new_user_session_path unless user_signed_in?
   end
-
 end

@@ -1,0 +1,30 @@
+.place-field{
+  display: flex;
+}
+
+.wrapper{
+  justify-content: center;
+}
+
+
+.place-wrapper{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  align-items: center;
+  border:2px solid black;
+}
+
+
+.place-item{
+  text-align: center;
+  margin:10px;
+  overflow: hidden;
+  height:250px;
+  width:250px;
+  border:2px solid gray;
+
+}
+.place-image{
+  object-fit: contain;
+}
