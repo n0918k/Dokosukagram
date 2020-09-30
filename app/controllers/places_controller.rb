@@ -1,5 +1,5 @@
 class PlacesController < ApplicationController
-  before_action :set_place, only: [:show, :edit]
+  before_action :set_place, only: [:show, :edit,:destroy]
   before_action :login
 
   def index
@@ -18,6 +18,11 @@ class PlacesController < ApplicationController
     else
       render 'new'
     end
+  end
+
+  def destroy
+    @place.destroy
+    redirect_to root_path
   end
 
   def show
