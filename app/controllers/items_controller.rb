@@ -24,7 +24,7 @@ class ItemsController < ApplicationController
     @item = Item.find(params[:id])
     if user_signed_in? && @item.user_id == current_user.id && @item.valid?
       @item.update(item_update)
-      redirect_to place_item_path(@item.id), notice: '更新しました'
+      redirect_to place_item_path(@item.id)
     else
       render new_user_session_path
     end
