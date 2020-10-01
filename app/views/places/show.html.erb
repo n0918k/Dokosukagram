@@ -4,7 +4,10 @@
   <%= form_with model: @item,url: place_items_path(@place.id) do |f| %>
     <%= f.label :name ,"商品名"%>
     <%= f.text_field :name,id:"item_name" %>
+    <%= f.label :store,"個数"%>
+    <%= f.number_field :store,id: "item_store",class: 'col-xs-1'%>
     <%= f.file_field :image,id: "item_image"%>
+
     <%= f.submit '送信',class:"btn btn-primary"%>
 
   <% end %>
@@ -15,6 +18,7 @@
   <p class="h1 mt-5"><%= @place.name%></p>
     <%= image_tag @place.image.variant(resize:'500x500')%>
   </div>
+  <div class="mt-5 mb-5">
 <div id='items'>
 
       <div class="place-wrapper ">
@@ -29,4 +33,5 @@
           </div>
         <% end %>
       </div>
+</div>
 </div>

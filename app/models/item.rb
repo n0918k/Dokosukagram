@@ -6,6 +6,7 @@ class Item < ApplicationRecord
   with_options presence: true do
     validates :name
     validates :image
+    validates :store
   end
 
   def self.search(search)
