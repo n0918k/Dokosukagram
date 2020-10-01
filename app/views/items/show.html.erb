@@ -1,0 +1,26 @@
+<%= render "shared/header"%>
+
+<div class="container text-center mt-5">
+    <% flash.each do |message_type, message| %>
+      <div class=" mb-5 bg-success p-3"> <p class="text-white "><%= message%></p></div>
+    <% end %>
+  <%= form_with model:@item,url: place_item_path(@item.place_id,@item.id),method: :patch,local: true do |f|%>
+    <%= f.label :number,"個数",class: "mr-2"%>
+    <%= f.number_field :store%>
+    <%= f.submit%>
+  <% end%>
+
+<div class="text-right">
+  <%= link_to "この商品を削除",place_item_path(@item.place_id,@item.id),method: :delete,class:"btn btn-danger ml-5 text-right btn-lg"%>
+</div>
+  <div class="mt-5">
+  <p class="h1 mt-5 mb-5"><%= @item.name%></p>
+    <%= image_tag @item.image.variant(resize:'400x400')%>
+
+
+    <p class="h3 mt-3"> 個数: <%= @item.store%></p>
+    <p class="h3 mt-3"> 保管場所: <%= @item.place.name%></p>
+  </div>
+
+
+</div>

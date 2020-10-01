@@ -1,0 +1,22 @@
+<%= render "shared/header"%>
+
+<div class="container text-center mt-3">
+
+  <div class="mt-5 mb-5">
+
+
+      <div class="place-wrapper ">
+        <% @items.each do |item|%>
+          <div class="place-item">
+
+            <%= link_to place_item_path(item.id,item.place_id)do%>
+              <div class="h4 text-dark">
+                <%= item.name %>
+              </div>
+              <%= image_tag item.image.variant(resize:'250x250')%>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+
+</div>
