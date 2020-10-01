@@ -1,5 +1,5 @@
 class PlacesController < ApplicationController
-  before_action :set_place, only: [:show, :edit,:destroy]
+  before_action :set_place, only: [:show, :edit, :destroy]
   before_action :login
 
   def index

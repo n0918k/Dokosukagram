@@ -1,24 +1,47 @@
 # README
+# docosukagram
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 簡単な説明
 
-Things you may want to cover:
 
-* Ruby version
 
-* System dependencies
+***デモ***
 
-* Configuration
+![デモ](https://image-url.gif)
 
-* Database creation
+## 機能
 
-* Database initialization
+- ユーザー登録
+- 場所の登録
+- 商品の登録
+- 検索機能
 
-* How to run the test suite
+## 使い方
 
-* Services (job queues, cache servers, search engines, etc.)
+1. 使い方
+2. 使い方
+3. 使い方
 
-* Deployment instructions
+## テスト
 
-* ...
+1. 使い方
+2. 使い方
+3. 使い方
+
+## デプロイ
+
+1. デプロイ
+2. デプロイ
+3. デプロイ
+
+## その他
+
+その他その他その他その他
+その他その他その他その他
+その他その他その他その他
+その他その他その他その他
+
+## 作者
+
+[@n0918k3](https://twitter.com/n0918k3)
+mail to: o83.nakagawa.koichiro@gmail.com
