@@ -1,5 +1,5 @@
 # README
-# dokosukagram
+# Dokosukagram
 
 ## どこに何があるかを探す手間や、時間を節約したい
 - 開発の経緯
