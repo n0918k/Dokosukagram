@@ -12,7 +12,7 @@
 </div>
   <div class="mt-5">
   <p class="h1 mt-5 mb-5"><%= @item.name%></p>
-    <%= image_tag @item.image.variant(resize:'400x400')%>
+    <%= image_tag @item.image ,class:"item-image-lg"%>
 
 
     <p class="h3 mt-3"> 個数: <%= @item.store%></p>

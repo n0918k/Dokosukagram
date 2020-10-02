@@ -3,8 +3,9 @@
 <div class="container text-center mt-3">
 
   <div class="mt-5 mb-5">
-
-
+      <% if @items.blank?%>
+        <h2 class= "h2">＊＊＊商品はありません＊＊＊</h2>
+      <% end %>
       <div class="place-wrapper ">
         <% @items.each do |item|%>
           <div class="place-item">
@@ -13,7 +14,7 @@
               <div class="h4 text-dark">
                 <%= item.name %>
               </div>
-              <%= image_tag item.image.variant(resize:'250x250')%>
+              <%= image_tag item.image,class: "item-image"%>
             <% end %>
           </div>
         <% end %>

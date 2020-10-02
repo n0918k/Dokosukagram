@@ -16,7 +16,7 @@
   <%= link_to 'この場所を削除する',place_path(@place.id),method: :delete,class:"btn btn-danger ml-5 text-right"%>
 </div>
   <p class="h1 mt-5"><%= @place.name%></p>
-    <%= image_tag @place.image.variant(resize:'500x500')%>
+    <%= image_tag @place.image ,class: "item-image-lg"%>
   </div>
   <div class="mt-5 mb-5">
 <div id='items'>
