@@ -2,9 +2,7 @@
 <div class="container-fluid text-center">
 <div class="container w-50">
 <h1 class="h2 bg-primary text-light p-4">ログイン</h2>
-<div class="form-group mt-5 ">
-<%= link_to "ゲストとしてログイン", users_guest_sign_in_path,method: :post,class: "btn btn-success w-100 btn-lg"%>
- </div>
+
 <%= form_for(resource, as: resource_name, url: session_path(resource_name),class:"form-group") do |f| %>
   <div class="form-group text-left h3 mt-5">
     <%= f.label :email,class:"mb-4" %>
@@ -27,6 +25,9 @@
     <%= f.submit "ログイン",class: "btn btn-outline-primary w-100 btn-lg" %>
   </div>
 <% end %>
+<div class="form-group mt-5 ">
+<%= link_to "ゲストとしてログイン", users_guest_sign_in_path,method: :post,class: "btn btn-success w-100 btn-lg"%>
+ </div>
 </div>
 <div class="container w-50 text-center mt-5 h4">
 <%= render "users/shared/links" %>

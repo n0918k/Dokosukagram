@@ -13,7 +13,7 @@ class User < ApplicationRecord
 
   def self.guest
     find_or_create_by!(nickname: 'ゲスト', email: 'guest@example.com') do |user|
-      user.password = "ccc111"
+      user.password = 'ccc111'
     end
   end
 end

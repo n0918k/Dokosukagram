@@ -17,7 +17,7 @@
 
 ***デモ***
 ## ログイン
-![ログイン](app/image/0c5d0e16973e809395c0d9799730b4a1.mp4.gif)
+![ログイン](app/image/111ae05596079a3e629e7e90a9ac3bae.mp4.gif)
 ## 場所の登録
 ![場所の登録](app/image/62d728803c84cb9cf2e675cb76c4bf5a.mp4.gif)
 ## 商品の登録
@@ -35,9 +35,7 @@
 ## デプロイ
 
 1. Heroku(https://docosukagram.herokuapp.com/)</br>
-- ログイン時は下記を入力してください</br>
-メールアドレス: 1@1</br>
-パスワード: ccc111
+
 
 ## その他
 - 使用言語 HTML/CSS,Ruby,Javascript</br>
