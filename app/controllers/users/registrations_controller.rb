@@ -1,15 +1,9 @@
 # frozen_string_literal: true
 
-class User::RegistrationsController < Devise::RegistrationsController
+class Users::RegistrationsController < Devise::RegistrationsController
   # before_action :configure_sign_up_params, only: [:create]
   # before_action :configure_account_update_params, only: [:update]
-  before_action :login
 
-  private
-
-  def login
-    redirect_to new_user_session_path unless user_signed_in?
-  end
   # GET /resource/sign_up
   # def new
   #   super

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class User::UnlocksController < Devise::UnlocksController
+class Users::UnlocksController < Devise::UnlocksController
   # GET /resource/unlock/new
   # def new
   #   super
@@ -9,13 +9,7 @@ class User::UnlocksController < Devise::UnlocksController
   # POST /resource/unlock
   # def create
   #   super
-  # end  before_action :login
-
-  private
-
-  def login
-    redirect_to new_user_session_path unless user_signed_in?
-  end
+  # end
 
   # GET /resource/unlock?unlock_token=abcdef
   # def show

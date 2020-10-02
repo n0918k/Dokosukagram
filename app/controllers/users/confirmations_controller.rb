@@ -1,17 +1,11 @@
 # frozen_string_literal: true
 
-class User::ConfirmationsController < Devise::ConfirmationsController
+class Users::ConfirmationsController < Devise::ConfirmationsController
   # GET /resource/confirmation/new
   # def new
   #   super
   # end
-  before_action :login
 
-  private
-
-  def login
-    redirect_to new_user_session_path unless user_signed_in?
-  end
   # POST /resource/confirmation
   # def create
   #   super
