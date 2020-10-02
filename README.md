@@ -35,7 +35,7 @@
 ## デプロイ
 
 1. Heroku(https://docosukagram.herokuapp.com/)</br>
-- ログイン時は下記を入力してください
+- ログイン時は下記を入力してください</br>
 メールアドレス: 1@1</br>
 パスワード: ccc111
 
