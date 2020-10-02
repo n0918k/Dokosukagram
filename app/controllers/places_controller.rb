@@ -30,7 +30,7 @@ class PlacesController < ApplicationController
   end
 
   def search
-    @items = Item.search(params[:keyword])
+    @items = current_user.items.search(params[:keyword])
   end
 
   private
