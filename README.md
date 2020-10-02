@@ -41,5 +41,7 @@
 
 ## その他
 - 使用言語 HTML/CSS,Ruby,Javascript</br>
-- 使用フレームワーク Ruby on Rails,BootStrap
 
+- 使用フレームワーク Ruby on Rails,BootStrap</br>
+
+- クラウド Amazon S3
