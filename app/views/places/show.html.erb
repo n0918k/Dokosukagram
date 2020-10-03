@@ -2,6 +2,7 @@
 
 <div class="container text-center mt-3">
   <%= form_with model: @item,url: place_items_path(@place.id) do |f| %>
+
     <%= f.label :name ,"商品名"%>
     <%= f.text_field :name,id:"item_name" %>
     <%= f.label :store,"個数"%>

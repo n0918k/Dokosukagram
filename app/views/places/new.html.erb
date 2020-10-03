@@ -3,7 +3,7 @@
 <div class="container w-50">
 
 <%= form_with model:@place,local: true  do|f|%>
-
+<%= render 'shared/error_messages', model: f.object ,class:"alert"%>
   <div class="form-group text-left h3 mt-5">
     <%= f.label :name,"場所の名前" ,class:"mb-4"%>
     <%= f.text_field :name,class:"form-control mb-4 input-lg" %>

@@ -26,7 +26,7 @@ class ItemsController < ApplicationController
       @item.update(item_update)
       redirect_to place_item_path(@item.id)
     else
-      render new_user_session_path
+      render place_items_path(@item.id)
     end
   end
 

@@ -3,3 +3,6 @@ ja:
    attributes:
      user:
        nickname: ニックネーム
+     place:
+       name: 場所の名前
+       image: 画像

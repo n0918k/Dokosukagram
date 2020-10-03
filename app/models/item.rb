@@ -6,7 +6,7 @@ class Item < ApplicationRecord
   with_options presence: true do
     validates :name
     validates :image
-    validates :store
+    validates :store, format: { with: /\A[0-9]+\z/ }
   end
 
   def self.search(search)
