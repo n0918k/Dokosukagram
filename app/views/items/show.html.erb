@@ -2,15 +2,16 @@
 
 <div class="container text-center mt-5">
 <p class="h2 mt-5 mb-5"> 保管場所: <%= @item.place.name%></p>
+
+
+<div class="text-right">
+  <%= link_to "この商品を削除",place_item_path(@item.place_id,@item.id),method: :delete,class:"btn btn-danger ml-5 text-right btn-lg"%>
+</div>
   <%= form_with model:@item,url: place_item_path(@item.place_id,@item.id),method: :patch,local: true do |f|%>
     <%= f.label :number,"個数",class: "mr-2"%>
     <%= f.number_field :store%>
     <%= f.submit%>
   <% end%>
-
-<div class="text-right">
-  <%= link_to "この商品を削除",place_item_path(@item.place_id,@item.id),method: :delete,class:"btn btn-danger ml-5 text-right btn-lg"%>
-</div>
   <div class="mt-5">
 
   <p class="h1 mt-5 mb-5"><%= @item.name%></p>
