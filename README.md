@@ -32,6 +32,9 @@
 - 商品の登録
 - 検索機能
 
+## ER図
+(ER.drawio.png)
+
 ## デプロイ
 
 1. Heroku(https://docosukagram.herokuapp.com/)</br>
